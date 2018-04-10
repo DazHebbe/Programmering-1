@@ -70,7 +70,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 492}
   m_MaxSize: {x: 10004, y: 14042}
   vertical: 1
-  controlID: 67
+  controlID: 59
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 93
+  controlID: 9
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -278,16 +278,16 @@ MonoBehaviour:
     - Assets/Scripts
   m_ViewMode: 0
   m_StartGridSize: 64
-  m_LastFolders:
-  - Assets/Audio
+  m_LastFolders: []
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\elev\Documents\Space Shooter
+  m_LastProjectPath: C:\Users\elev\Documents\GitHub\Programmering-1\Prog1-Unity\Space
+    Shooter
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 6e280000
     m_LastClickedID: 10350
-    m_ExpandedIDs: 000000004e2700008e270000
+    m_ExpandedIDs: 00000000522700009227000088280000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -312,24 +312,24 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 43}
+    scrollPos: {x: 0, y: 27}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000004e2700008e27000078280000
+    m_ExpandedIDs: 00000000522700009227000088280000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: DestroyByTime
+      m_OriginalName: DestroyByTime
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 1994
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 2}
     m_SearchString: 
@@ -431,9 +431,9 @@ MonoBehaviour:
     height: 494
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 6e350000
+    m_SelectedIDs: cc070000
     m_LastClickedID: 0
-    m_ExpandedIDs: cab3fffff2caffffa6fbffff000000004a290000
+    m_ExpandedIDs: 9efbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -488,9 +488,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.019307375, y: -0.007710457, z: 8.508659}
+    m_Target: {x: -6.4023123, y: 3.2909756, z: -5.0577106}
     speed: 2
-    m_Value: {x: 0.019307375, y: -0.007710457, z: 8.508659}
+    m_Value: {x: -6.4023123, y: 3.2909756, z: -5.0577106}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -513,17 +513,17 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.64067906, y: 0.004606667, z: -0.0038439746, w: -0.7677853}
+    m_Target: {x: -0.18130928, y: -0.17741218, z: 0.03327426, w: -0.96671855}
     speed: 2
-    m_Value: {x: -0.6406791, y: 0.0046066674, z: -0.0038439748, w: -0.7677854}
+    m_Value: {x: -0.18130928, y: -0.17741218, z: 0.03327426, w: -0.96671855}
   m_Size:
-    m_Target: 4.47522
+    m_Target: 7.677653
     speed: 2
-    m_Value: 4.47522
+    m_Value: 7.677653
   m_Ortho:
-    m_Target: 1
+    m_Target: 0
     speed: 2
-    m_Value: 1
+    m_Value: 0
   m_ShowGlobalGrid: 1
   m_LastSceneViewRotation: {x: -0.3600931, y: 0.3022211, z: -0.1245485, w: -0.87377524}
   m_LastSceneViewOrtho: 0

@@ -11,12 +11,12 @@ public class BGScroller : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        startPosition = transform.position;
+        startPosition = transform.position; //Sätter startpositionen för våran bakrund.
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        float newPosition = Mathf.Repeat(Time.time * scrollSpeed, tileSizeZ);
-        transform.position = startPosition + Vector3.forward * newPosition;
+        float newPosition = Mathf.Repeat(Time.time * scrollSpeed, tileSizeZ); //Sätter positionen bakrunden ska scrolla till och hur snabbt den ska scrolla.
+        transform.position = startPosition + Vector3.forward * newPosition; //Gör så att bakrunden scrollar till sin nya position.
 	}
 }

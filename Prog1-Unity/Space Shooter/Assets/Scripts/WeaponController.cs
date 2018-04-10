@@ -11,16 +11,15 @@ public class WeaponController : MonoBehaviour
 
     private AudioSource audioSource;
 
-    // Use this for initialization
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        InvokeRepeating("Fire", delay, fireRate);
+        InvokeRepeating("Fire", delay, fireRate); // Limiterar hur snabbt man kan skjuta.
     }
 
     void Fire ()
     {
-        Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
+        Instantiate(shot, shotSpawn.position, shotSpawn.rotation); //Instantiera ett skott och spela ett ljud.
         audioSource.Play();
     }
 }

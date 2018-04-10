@@ -22,33 +22,33 @@ public class EvasiveManeuver : MonoBehaviour {
     {
         rb = GetComponent<Rigidbody>();
         currentSpeed = rb.velocity.z;
-        StartCoroutine(Evade());
+        StartCoroutine(Evade()); // Starta Evade.
     }
 
     IEnumerator Evade()
     {
-        yield return new WaitForSeconds(Random.Range(startWait.x, startWait.y));
+        yield return new WaitForSeconds(Random.Range(startWait.x, startWait.y)); // Inom en tid jag sätter Vänta.
 
         while (true)
         {
-            targetManeuver = Random.Range(1, dodge) * -Mathf.Sign(transform.position.x);
-            yield return new WaitForSeconds(Random.Range(maneuverTime.x, maneuverTime.y));
-            targetManeuver = 0;
-            yield return new WaitForSeconds(Random.Range(maneuverWait.x, maneuverWait.y));
+            targetManeuver = Random.Range(1, dodge) * -Mathf.Sign(transform.position.x); //Inom en range mellan 1 och ett nummer jag sätter, rör fienden i X axisesn.
+            yield return new WaitForSeconds(Random.Range(maneuverTime.x, maneuverTime.y)); // Inom en tid jag sätter Väja.
+            targetManeuver = 0; //Sätt targetManeuver till 0.
+            yield return new WaitForSeconds(Random.Range(maneuverWait.x, maneuverWait.y)); // Inom en tid jag sätter Vänta.
         }
     }
 
     void FixedUpdate()
     {
-        float newManeuver = Mathf.MoveTowards(rb.velocity.x, targetManeuver, Time.deltaTime * smoothing);
+        float newManeuver = Mathf.MoveTowards(rb.velocity.x, targetManeuver, Time.deltaTime * smoothing); // Ett kommando som gör så att skeppet är mindre hackigt när det väjar.
         rb.velocity = new Vector3(newManeuver, 0.0f, currentSpeed);
         rb.position = new Vector3
         (
             Mathf.Clamp(rb.position.x, boundary.xMin, boundary.xMax),
             0.0f,
-            Mathf.Clamp(rb.position.z, boundary.zMin, boundary.zMax)
+            Mathf.Clamp(rb.position.z, boundary.zMin, boundary.zMax) // Håll skeppet inom Boundarys område.
         );
 
-        rb.rotation = Quaternion.Euler(0.0f, 0.0f, rb.velocity.x * -tilt);
+        rb.rotation = Quaternion.Euler(0.0f, 0.0f, rb.velocity.x * -tilt); // Tilta skeppet när det svänger.
     }
 }

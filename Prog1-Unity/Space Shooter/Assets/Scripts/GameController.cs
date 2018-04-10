@@ -28,14 +28,14 @@ public class GameController : MonoBehaviour
         gameOverText.text = "";
         score = 0;
         UpdateScore();
-       StartCoroutine (SpawnWaves());
+       StartCoroutine (SpawnWaves()); // Starta koden inom SpawnWaves.
     }
 
     void Update()
     {
-        if (restart)
+        if (restart) //Om restart är sant.
         {
-            if (Input.GetKeyDown (KeyCode.R))
+            if (Input.GetKeyDown (KeyCode.R)) // Om R trycks ner, kör om spelet.
             {
                 Application.LoadLevel(Application.loadedLevel);
             }
@@ -44,18 +44,18 @@ public class GameController : MonoBehaviour
 
     IEnumerator SpawnWaves ()
     {
-        yield return new WaitForSeconds(startWait);
+        yield return new WaitForSeconds(startWait); // Vänta innan du börjar spawna fiender.
         while (true)
         {
-            for (int i = 0; i < hazardCount; i++)
+            for (int i = 0; i < hazardCount; i++) // Spawna så många fiender som jag sätter.
             {
-                GameObject hazard = hazards[Random.Range (0,hazards.Length)];
-                Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
+                GameObject hazard = hazards[Random.Range (0,hazards.Length)]; //Vilka fiender som ska spawnas.
+                Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z); // Vart fienderna ska spawnas.
                 Quaternion spawnRotation = Quaternion.identity;
-                Instantiate(hazard, spawnPosition, spawnRotation);
-                yield return new WaitForSeconds(spawnWait);
+                Instantiate(hazard, spawnPosition, spawnRotation); // Instantiera en hazard.
+                yield return new WaitForSeconds(spawnWait); // Vänta med att spawna en fiende.
             }
-            yield return new WaitForSeconds(waveWait);
+            yield return new WaitForSeconds(waveWait); //Vänta med att spawna fler fiender.
 
             if (gameOver)
             {
@@ -72,7 +72,7 @@ public class GameController : MonoBehaviour
         UpdateScore();
     }
 
-    void UpdateScore ()
+    void UpdateScore () // Uppdatera poängen.
     {
         scoreText.text = "Score: " + score;
     }
