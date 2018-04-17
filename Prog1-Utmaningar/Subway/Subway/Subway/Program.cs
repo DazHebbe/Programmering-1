@@ -4,15 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PersonRegister
+namespace Subway
 {
     class Program // Erik Herbertsson
     {
         static void Main(string[] args)
         {
-
-            // Jag startar min logik.
             Logik logik = new Logik();
+            // Startar min logik.
             logik.Start();
         }
     }

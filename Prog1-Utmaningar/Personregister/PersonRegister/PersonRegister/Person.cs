@@ -12,7 +12,7 @@ namespace PersonRegister
         int age;
         string city;
 
-        public string Name
+        public string Name  // property/egenskap/GETTER
         {
             get { return name; }
         }
